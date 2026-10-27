@@ -1,2 +1,2 @@
 # hi
-ONLY OPEN diddy clud.htrml PLEASE
+ONLY OPEN diddy clud.html PLEASE
