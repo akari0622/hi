@@ -1,6 +1,7 @@
 # hi
 
 steps
-- download the diddy blud folder
-- open diddy blud
+- download the diddy blud zip
+- extract
+- ONLY open diddy blud html
 - hehe enjoy
