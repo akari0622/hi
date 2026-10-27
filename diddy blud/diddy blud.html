@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Hyacinth</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+      background: #e8d8ee;
+    }
+
+    body {
+      font-family: "cursive", cursive;
+      background: linear-gradient(135deg, #f3edf6, #d59cf1);
+      background-attachment: fixed;
+      background-color: #e8d8ee;
+      color: #382d3d;
+      min-height: 100vh;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      background: #392b43;
+      padding: 1.75rem 2rem;
+      border-bottom: 3px solid #c58eae;
+      box-shadow: 0 4px 16px rgb(52 37 61 / 14%);
+    }
+
+    .nav-title {
+      color: #f3e8f4;
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
+      letter-spacing: 0.04em;
+      text-align: center;
+    }
+
+    .nav-title span {
+      color: #e5a9cc;
+      padding: 0 0.35em;
+    }
+
+    nav a.button {
+      display: inline-block;
+      padding: 10px 24px;
+      background: #eee3f0;
+      color: #49364f;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 3px 10px rgb(0 0 0 / 16%);
+    }
+
+    nav a.button:hover {
+      background: #e2cadd;
+      transform: translateY(-2px);
+    }
+
+    nav a.button:focus-visible,
+    .letter:focus-visible {
+      outline: 3px solid #b65b8c;
+      outline-offset: 3px;
+    }
+
+    .hero {
+      text-align: center;
+      grid-area: hero;
+      padding: 3.5rem 1.5rem;
+      background: rgb(255 255 255 / 55%);
+      border: 1px solid #dfcfe3;
+      border-radius: 18px;
+      box-shadow: 0 12px 32px rgb(67 47 76 / 10%);
+    }
+
+    .page-content {
+      display: grid;
+      grid-template-columns: minmax(100px, 1fr) minmax(0, 560px) minmax(100px, 1fr);
+      grid-template-areas:
+        "left hero right"
+        "bottom bottom bottom";
+      align-items: center;
+      gap: 2rem;
+      width: min(1200px, 100%);
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+
+    .image-slot {
+      display: grid;
+      place-items: center;
+      width: min(100%, 160px);
+      aspect-ratio: 1;
+      padding: 1rem;
+      color: #625568;
+      text-align: center;
+      font: 0.95rem/1.5 "cursive", cursive;
+    }
+
+    .image-slot > figcaption {
+      width: 100%;
+      height: 100%;
+    }
+
+    .image-slot.left {
+      grid-area: left;
+      justify-self: center;
+      transform: rotate(-5deg);
+    }
+
+    .image-slot.right {
+      grid-area: right;
+      justify-self: center;
+      transform: rotate(5deg);
+    }
+
+    .image-slot.bottom {
+      grid-area: bottom;
+      justify-self: center;
+      width: 240px;
+      transform: rotate(-3deg);
+    }
+
+    .image-slot img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #493451;
+    }
+
+    .hero p {
+      color: #625568;
+    }
+
+    .letter {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 14px 32px;
+      background: #a45d83;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 12px rgb(90 47 74 / 18%);
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .letter:hover {
+      background: #854866;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 480px) {
+      nav {
+        padding: 1rem;
+      }
+
+      nav a.button {
+        padding: 10px 16px;
+        margin: 4px;
+      }
+
+      .page-content {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+          "hero"
+          "left"
+          "right"
+          "bottom";
+        gap: 1.5rem;
+        margin: 1.5rem auto;
+        padding: 0 1rem;
+      }
+
+      .hero {
+        padding: 3rem 1.25rem;
+      }
+
+      .image-slot.left,
+      .image-slot.right {
+        width: 130px;
+      }
+
+      .image-slot.bottom {
+        width: 190px;
+      }
+    }
+
+    @media (min-width: 481px) and (max-width: 800px) {
+      .page-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas:
+          "hero hero"
+          "left right"
+          "bottom bottom";
+      }
+
+      .hero {
+        padding: 4rem 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1 class="nav-title"><span aria-hidden="true">✦</span>Hyacinth's little corner<span aria-hidden="true">✦</span></h1>
+    <a href="https://ngl.link/hitori72347" class="button">Don't Click !!!</a>
+  </nav>
+
+  <main class="page-content">
+    <!-- Replace each placeholder's figcaption with an img, e.g. <img src="images/character.png" alt="Kuromi"> -->
+    <figure class="image-slot left">
+      <figcaption><img src="odet.png" alt="Kuromi"></figcaption>
+    </figure>
+
+    <div class="hero">
+      <h1>For you Hyacinth</h1>
+      <p style="font-size: 24px;">↓↓↓</p>
+      <a href="skibdi.html" class="letter">please read :></a>
+    </div>
+
+    <figure class="image-slot right">
+      <figcaption><img src="faru.png" alt="Character 2"></figcaption>
+    </figure>
+
+    <figure class="image-slot bottom">
+      <figcaption><img src="nilu.png" alt="Character 3"></figcaption>
+    </figure>
+  </main>
+
+</body>
+</html>
