@@ -1,2 +1,6 @@
 # hi
-ONLY OPEN diddy clud.html PLEASE
+
+steps
+- download the diddy blud folder
+- open diddy blud
+- hehe enjoy
